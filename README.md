@@ -44,7 +44,7 @@ d-----      2026-10-29   오후 7:04
 
 PS C:\Users\User\dev-workstation-mission> cd practice
 PS C:\Users\User\dev-workstation-mission\practice> 
-
+```
 ### 3) 파일 생성 및 읽기, 상위 폴더 이동 (echo, cat, cd ..)
 터미널에서 텍스트 파일을 생성하고 내용을 확인한뒤, 다시 원래 폴더로 돌아왔습니다.
 
@@ -67,7 +67,7 @@ PS C:\Users\User\dev-workstation-mission\practice> cat hello.txt
 hello Developer!
 PS C:\Users\User\dev-workstation-mission\practice> cd ..
 PS C:\Users\User\dev-workstation-mission> 
-
+```
 ## 2. Docker 설치
 - WSL 설치 및 재부팅 완료
 - Docker Desktop 설치 완료
