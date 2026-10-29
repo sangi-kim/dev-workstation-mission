@@ -14,7 +14,9 @@ Path
 ----                                 
 C:\Users\User\dev-workstation-mission
 
+
 ### 2) 폴더 생성 및 이동 (mkdir, ls, cd)
+
 
 ```bash
 PS C:\Users\User\dev-workstation-mission> mkdir practice
