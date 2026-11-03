@@ -5,6 +5,7 @@
 Path                                          
 ----                                          
 C:\Users\User\workspace\dev-workstation-mis...
+```
 ### 파일 목록 확인 (ls)
 디렉터리: C:\Users\User\workspace\dev-work
     station-mission
