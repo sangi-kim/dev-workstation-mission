@@ -7,6 +7,7 @@ Path
 C:\Users\User\workspace\dev-workstation-mis...
 ```
 ### 파일 목록 확인 (ls)
+```bash
 디렉터리: C:\Users\User\workspace\dev-work
     station-mission
 
@@ -16,3 +17,4 @@ Mode                 LastWriteTime      Length
 d-----      2026-11-03   오후 8:44            
 -a----      2026-11-03   오후 6:45          44
 -a----      2026-11-03   오후 8:16         799
+```
