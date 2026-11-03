@@ -1,0 +1,240 @@
+도구버전 확인
+PS C:\Users\User\workspace\dev-workstation-mission> git --version
+git version 2.56.0.windows.4
+PS C:\Users\User\workspace\dev-workstation-mission> docker --version
+Docker version 29.9.2, build a82e528
+PS C:\Users\User\workspace\dev-workstation-mission> docker info
+Client:
+ Version:    29.9.2
+ Context:    desktop-linux
+ Debug Mode: false
+ Plugins:
+  agent: Docker AI Agent Runner (Docker Inc.)
+    Version:  v1.152.0
+    Path:     C:\Users\User\.docker\cli-plugins\docker-agent.exe
+  ai: Docker AI Agent - Ask Gordon (Docker Inc.)
+    Version:  v1.33.0
+    Path:     C:\Users\User\.docker\cli-plugins\docker-ai.exe
+  buildx: Docker Buildx (Docker Inc.)
+    Version:  v0.38.1
+    Path:     C:\Users\User\.docker\cli-plugins\docker-buildx.exe
+  compose: Docker Compose (Docker Inc.)
+    Version:  v5.6.1
+    Path:     C:\Users\User\.docker\cli-plugins\docker-compose.exe
+  debug: Get a shell into any image or container (Docker Inc.)
+    Version:  0.49.0
+    Path:     C:\Users\User\.docker\cli-plugins\docker-debug.exe
+  desktop: Docker Desktop commands (Docker Inc.)
+    Version:  4.97.0
+    Path:     C:\Users\User\.docker\cli-plugins\docker-desktop.exe
+  dhi: CLI for managing Docker Hardened Images (Docker Inc.)
+    Version:  v0.0.9
+    Path:     C:\Users\User\.docker\cli-plugins\docker-dhi.exe
+  extension: Manages Docker extensions (Docker Inc.)
+    Version:  v0.2.32
+    Path:     C:\Users\User\.docker\cli-plugins\docker-extension.exe
+  init: Creates Docker-related starter files for your project (Docker Inc.)
+    Version:  v1.4.1
+    Path:     C:\Users\User\.docker\cli-plugins\docker-init.exe
+  mcp: Docker MCP Plugin (Docker Inc.)
+    Version:  v0.44.2
+    Path:     C:\Users\User\.docker\cli-plugins\docker-mcp.exe
+  model: Docker Model Runner (Docker Inc.)
+    Version:  v1.2.9
+    Path:     C:\Users\User\.docker\cli-plugins\docker-model.exe
+  offload: Docker Offload (Docker Inc.)
+    Version:  v0.7.21
+    Path:     C:\Users\User\.docker\cli-plugins\docker-offload.exe
+  pass: Docker Pass Secrets Manager Plugin (beta) (Docker Inc.)
+    Version:  v0.3.2
+    Path:     C:\Users\User\.docker\cli-plugins\docker-pass.exe
+  sandbox: "docker sandbox" is deprecated, use Docker Sandboxes instead (Docker Inc.)
+    Version:  v0.13.0
+    Path:     C:\Users\User\.docker\cli-plugins\docker-sandbox.exe
+  scout: Docker Scout (Docker Inc.)
+    Version:  v1.27.0
+    Path:     C:\Users\User\.docker\cli-plugins\docker-scout.exe
+
+Server:
+ Containers: 2
+  Running: 1
+  Paused: 0
+  Stopped: 1
+ Images: 2
+ Server Version: 29.9.2
+ Storage Driver: overlayfs
+  driver-type: io.containerd.snapshotter.v1
+ Logging Driver: local
+ Cgroup Driver: cgroupfs
+ Cgroup Version: 2
+ Plugins:
+  Volume: local
+  Network: bridge host ipvlan macvlan null overlay
+  Log: awslogs fluentd gcplogs gelf journald json-file local splunk syslog
+ CDI spec directories:
+  /etc/cdi
+  /var/run/cdi
+ Discovered Devices:
+  cdi: docker.com/gpu=webgpu
+ Swarm: inactive
+ Runtimes: io.containerd.runc.v2 nvidia runc
+ Default Runtime: runc
+ Init Binary: docker-init
+ containerd version: b7a25261e029d68978bbf290df0a62fc819b3c51
+ runc version: v1.5.2-0-g29dd3dc2
+ init version: de40ad0
+ Security Options:
+  seccomp
+   Profile: builtin
+  cgroupns
+ Kernel Version: 6.18.54.1-microsoft-standard-WSL2
+ Operating System: Docker Desktop
+ OSType: linux
+ Architecture: x86_64
+ CPUs: 8
+ Total Memory: 7.605GiB
+ Name: docker-desktop
+ ID: 5a52089e-1d18-4ba6-9f4b-ae3202c985f0
+ Docker Root Dir: /var/lib/docker
+ Debug Mode: false
+ HTTP Proxy: http.docker.internal:3128
+ HTTPS Proxy: http.docker.internal:3128
+ No Proxy: hubproxy.docker.internal
+ Labels:
+  com.docker.desktop.address=npipe://\\.\pipe\docker_cli
+ Experimental: false
+ Insecure Registries:
+  hubproxy.docker.internal:5555
+  127.0.0.0/8
+  ::1/128
+ Live Restore Enabled: false
+ Firewall Backend: iptables
+
+실습용 파일 생성(CLI연습)
+PS C:\Users\User\workspace\dev-workstation-mission> echo "hello, workstation!" > hello.txt
+PS C:\Users\User\workspace\dev-workstation-mission> ls
+
+
+    디렉터리: C:\Users\User\workspace\dev-workstation-mission
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----      2026-11-03   오후 6:34                evidence
+-a----      2026-11-03   오후 6:45             44 hello.txt
+-a----      2026-11-03   오후 6:33             25 README.md
+
+User@4F-75 UCRT64 ~/workspace/dev-workstation-mission (main)
+$ pip install requests
+bash: pip: command not found
+
+User@4F-75 UCRT64 ~/workspace/dev-workstation-mission (main)
+$ pip list
+bash: pip: command not found
+
+User@4F-75 UCRT64 ~/workspace/dev-workstation-mission (main)
+$ source venv/Scripts/activate
+(venv) 
+User@4F-75 UCRT64 ~/workspace/dev-workstation-mission (main)
+$ pip install requests
+Collecting requests
+  Downloading requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+Collecting charset_normalizer<4,>=2 (from requests)
+  Downloading charset_normalizer-3.5.2-cp315-cp315-win_amd64.whl.metadata (47 kB)
+Collecting idna<4,>=2.5 (from requests)
+  Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+Collecting urllib3<3,>=1.26 (from requests)
+  Downloading urllib3-2.8.0-py3-none-any.whl.metadata (7.4kB)
+Collecting certifi>=2023.5.7 (from requests)
+  Downloading certifi-2026.10.23-py3-none-any.whl.metadata(2.5 kB)
+Downloading requests-2.34.2-py3-none-any.whl (73 kB)
+Downloading charset_normalizer-3.5.2-cp315-cp315-win_amd64.whl (210 kB)
+Downloading idna-3.20-py3-none-any.whl (69 kB)
+Downloading urllib3-2.8.0-py3-none-any.whl (135 kB)
+Downloading certifi-2026.10.23-py3-none-any.whl (135 kB)
+Installing collected packages: urllib3, idna, charset_normalizer, certifi, requests
+Successfully installed certifi-2026.10.23 charset_normalizer-3.5.2 idna-3.20 requests-2.34.2 urllib3-2.8.0
+
+[notice] A new release of pip is available: 26.2.2 -> 26.3
+[notice] To update, run: python.exe -m pip install --upgrade pip
+(venv) 
+User@4F-75 UCRT64 ~/workspace/dev-workstation-mission (main)
+$ pip list
+Package            Version
+------------------ ----------
+certifi            2026.10.23
+charset-normalizer 3.5.2
+idna               3.20
+pip                26.2.2
+requests           2.34.2
+urllib3            2.8.0
+(venv) 
+User@4F-75 UCRT64 ~/workspace/dev-workstation-mission (main)
+$ python main.py
+파이썬 환경 구축 완료!
+requests 버전: 2.34.2
+(venv) 
+User@4F-75 UCRT64 ~/workspace/dev-workstation-mission (main)
+$ python main.py
+--- 파이썬 환경 테스트 ---
+구글 접속 상태: 200 (200이면 성공!)
+파이썬 환경 구축이 완벽하게 완료되었습니다! 🎉
+(venv) 
+User@4F-75 UCRT64 ~/workspace/dev-workstation-mission (main)
+$ git add .
+(venv) 
+User@4F-75 UCRT64 ~/workspace/dev-workstation-mission (main)
+$ git commit -m "feat: 파이썬 가상환경 설정 및 테스트 완료"
+[main ace3a91] feat: 파이썬 가상환경 설정 및 테스트 완료
+ 3 files changed, 42 insertions(+)
+ create mode 100644 evidence/04-python-env.md
+ delete mode 100644 "evidence/\354\212\244\355\201\254\353\246\260\354\203\267.png"
+ create mode 100644 main.py
+(venv) 
+User@4F-75 UCRT64 ~/workspace/dev-workstation-mission (main)
+$ git push origin main
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 1.41 KiB | 1.41 MiB/s, done.
+Total 5 (delta 1), reused 0 (delta 0), pack-reused 0 (from0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/sangi-kim/dev-workstation-mission.git
+   9f8e972..ace3a91  main -> main
+(venv) 
+User@4F-75 UCRT64 ~/workspace/dev-workstation-mission (main)
+$ git add .
+(venv) 
+User@4F-75 UCRT64 ~/workspace/dev-workstation-mission (main)
+$ git commit -m "docs: 파이썬 환경 구축 완료 및 문서 정리"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+(venv) 
+User@4F-75 UCRT64 ~/workspace/dev-workstation-mission (main)
+$ git push origin main
+Everything up-to-date
+(venv) 
+User@4F-75 UCRT64 ~/workspace/dev-workstation-mission (main)
+$ python mission3.py
+(venv) 
+User@4F-75 UCRT64 ~/workspace/dev-workstation-mission (main)
+$ python mission3.py
+✅ 데이터 수집 성공!
+내용: {'userId': 1, 'id': 1, 'title': 'delectus aut autem', 'completed': False}
+💾 결과가 'result.json' 파일에 저장되었습니다.
+(venv) 
+User@4F-75 UCRT64 ~/workspace/dev-workstation-mission (main)
+$ ^C
+(venv) 
+User@4F-75 UCRT64 ~/workspace/dev-workstation-mission (main)
+$ python mission3_filter.py
+📊 전체 데이터 개수: 200개
+✅ 완료된 작업 개수: 90개
+💾 필터링된 결과가 'filtered_tasks.json'에 저장되었습니다.
+(venv) 
+User@4F-75 UCRT64 ~/workspace/dev-workstation-mission (main)
+$ 
+
