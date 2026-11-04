@@ -1,0 +1,36 @@
+Terminal transcript - 2026-11-04 19:37:24
+PS> docker build -t my-custom-web:v1 .
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 377B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/nginx:latest
+#2 DONE 0.3s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 32B done
+#4 DONE 0.0s
+
+#5 [1/2] FROM docker.io/library/nginx:latest@sha256:5ab5b0b01097420873a3f3330f44248e34a3c2a3e8d5ee30658aeae8cb7435da
+#5 resolve docker.io/library/nginx:latest@sha256:5ab5b0b01097420873a3f3330f44248e34a3c2a3e8d5ee30658aeae8cb7435da 0.0s done
+#5 DONE 0.0s
+
+#6 [2/2] COPY index.html /usr/share/nginx/html/index.html
+#6 CACHED
+
+#7 exporting to image
+#7 exporting layers done
+#7 exporting manifest sha256:8012bb932f2e356b6f0ae634ebeb85168cd32d8c7260ba85ff1dc2e94d2f30c8 done
+#7 exporting config sha256:32d3b7979aca0e7423b4b19c72075121c97faed0891fc57ca613547a677366fe done
+#7 exporting attestation manifest sha256:1a9322c6c109e256aa79359a4d56e867d3e5868588db7c9d5e059b74bba03e29 0.0s done
+#7 exporting manifest list sha256:0fef69f7993622cb4f93a56a8f13720298e7d12965a0dd9bfcee2a9b06a69e62 0.0s done
+#7 naming to docker.io/library/my-custom-web:v1 done
+#7 unpacking to docker.io/library/my-custom-web:v1 done
+#7 DONE 0.1s
+Exit code: 0

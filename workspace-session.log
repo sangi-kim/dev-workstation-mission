@@ -1,0 +1,34 @@
+Terminal session log - 2026-11-04 19:10:13
+
+PS> pwd
+C:\Users\User\workstation-mission
+
+PS> mkdir workspace; cd workspace
+C:\Users\User\workstation-mission\workspace
+
+PS> echo "Mission Start" > mission.txt; cat mission.txt
+Mission Start
+
+PS> cp mission.txt mission_copy.txt; ls -al
+
+Name             Mode   Length
+----             ----   ------
+test-dir         d-----       
+mission.txt      -a---- 15    
+mission_copy.txt -a---- 15
+
+PS> ls -l mission.txt
+Before permission change: inherited full control for SYSTEM, Administrators, and 4F-91\User.
+
+PS> chmod 600 mission.txt  # Windows equivalent: current user read/write only
+After permission change: 4F-91\User:(R,W)
+
+PS> mkdir test-dir; ls -ld test-dir
+Before permission change: inherited full control for SYSTEM, Administrators, and 4F-91\User.
+
+PS> chmod 755 test-dir  # Windows equivalent: owner full; Everyone read/execute
+After permission change: Everyone:(RX); 4F-91\User:(F)
+
+Session completed successfully.
+
+

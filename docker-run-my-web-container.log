@@ -1,0 +1,57 @@
+Terminal transcript - 2026-11-04 20:24:01
+PS> docker run -d -p 18881:80 --name my-web-container -v "${PWD}:/usr/share/nginx/html" my-web-server:v1
+# Resolved bind mount: C:\Users\User\workstation-mission:/usr/share/nginx/html
+075f63caa12f158af0e0d6559c35049864f1ba8cbfca61ed4e7b0bc482f29d1e
+Exit code: 0
+
+PS> docker ps --filter name=^/my-web-container$
+CONTAINER ID   IMAGE              COMMAND                  CREATED          STATUS          PORTS                                       NAMES
+075f63caa12f   my-web-server:v1   "/docker-entrypoint.??   13 seconds ago   Up 13 seconds   0.0.0.0:18881->80/tcp, [::]:18881->80/tcp   my-web-container
+Exit code: 0
+
+PS> docker inspect --format "{{.State.Status}}" my-web-container
+running
+Exit code: 0
+
+PS> curl.exe -i --max-time 10 http://localhost:18881/
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+
+  0      0   0      0   0      0      0      0                              0
+100    321 100    321   0      0  42370      0                              0
+100    321 100    321   0      0  39430      0                              0
+100    321 100    321   0      0  36862      0                              0
+HTTP/1.1 200 OK
+Server: nginx/1.31.8
+Date: Wed, 04 Nov 2026 11:24:16 GMT
+Content-Type: text/html
+Content-Length: 321
+Last-Modified: Wed, 04 Nov 2026 11:21:02 GMT
+Connection: keep-alive
+ETag: "6aeb151e-141"
+Accept-Ranges: bytes
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"> <!-- ?닿쾶 ?덉뼱???쒓?????源⑥졇?? -->
+    <title>?꾩빱 ?ㅼ뒿 ?쒕쾭</title>
+</head>
+<body>
+    <h1>?맫 Docker ???쒕쾭媛 ?뺤긽 ?묐룞 以묒엯?덈떎!</h1>
+    <p>??硫붿떆吏媛 蹂댁씤?ㅻ㈃ 8?④퀎 ?깃났?낅땲??</p>
+</body>
+</html>
+Exit code: 0
+
+Verification note: The initial terminal-text comparison did not match because Korean characters were rendered with a console encoding mismatch; verifying the HTTP body against index.html byte-for-byte.
+PS> curl.exe --silent --show-error --output "C:\Users\User\workstation-mission\docker-run-my-web-container-response.tmp" --write-out "HTTP %{http_code}" http://localhost:18881/
+HTTP 200
+Exit code: 0
+Byte-for-byte match with index.html: True (SHA256 89A0428A985041639C7029F51FA1B49578BF0E350780D26E66E13FC94CDCDD2C)
+Verification complete: container running and serves the exact index.html contents.
+
+PS> docker ps
+CONTAINER ID   IMAGE              COMMAND                  CREATED         STATUS         PORTS                                       NAMES
+075f63caa12f   my-web-server:v1   "/docker-entrypoint.??   7 minutes ago   Up 7 minutes   0.0.0.0:18881->80/tcp, [::]:18881->80/tcp   my-web-container
+Exit code: 0
